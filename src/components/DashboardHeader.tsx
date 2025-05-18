@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import LogoutButton from './LogoutButton';
 
 interface DashboardHeaderProps {
   title: string;
@@ -46,7 +45,6 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({ title, role }) => {
               <div className="text-gray-700">
                 Welcome, <span className="font-semibold">{userName}</span>
               </div>
-              <LogoutButton variant="primary" />
             </div>
             
             {/* Mobile view */}
@@ -65,9 +63,7 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({ title, role }) => {
                   <div className="px-4 py-2 text-sm text-gray-700">
                     Welcome, <span className="font-semibold">{userName}</span>
                   </div>
-                  <div className="px-4 py-2">
-                    <LogoutButton variant="text" className="w-full justify-start" />
-                  </div>
+
                 </div>
               )}
             </div>

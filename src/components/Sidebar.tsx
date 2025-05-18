@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa"; // For menu and close icons
+import LogoutButton from "./LogoutButton";
 
 interface SidebarProps {
   links: { name: string; path: string }[];
@@ -68,6 +69,8 @@ const Sidebar: React.FC<SidebarProps> = ({ links }) => {
         {/* Footer */}
         <footer className="mt-auto pt-4">
           <p className="text-gray-500 text-xs text-center"></p>
+                        <LogoutButton variant="primary" />
+
         </footer>
       </div>
 
